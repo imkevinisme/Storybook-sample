@@ -1,0 +1,82 @@
+
+
+
+.pagination {
+    @apply flex justify-between gap-2 w-full py-2;
+}
+
+.paginationButtons {
+    @apply flex gap-2 justify-end;
+}
+
+.paginationItemsCount {
+    @apply flex items-center gap-2;
+
+    p {
+        @apply text-slate-800 text-xs;
+    }
+}
+
+.paginationButton {
+    @apply py-1 px-3 rounded bg-slate-100 hover:bg-slate-200 text-slate-700;
+
+    &:disabled {
+        @apply bg-slate-100 text-slate-300 pointer-events-none;
+    }
+}
+
+.paginationActive {
+    @apply py-1 px-3 rounded bg-slate-200 text-slate-800;
+}
+
+.paginationEllipsis {
+    @apply py-1 px-3 text-slate-800;
+}
+
+.paginationItemsCountSelect {
+    @apply py-1 ps-3 bg-slate-100 text-slate-800 rounded;
+}
+
+.paginationInfo {
+    @apply flex items-center gap-2;
+
+    p {
+        @apply text-slate-800 text-xs;
+    }
+}
+
+
+// DARK
+:global(.dark) {
+    .paginationButton {
+        @apply bg-slate-800 hover:bg-slate-700 text-slate-200;
+
+        &:disabled {
+            @apply bg-slate-800 text-slate-600;
+        }
+    }
+
+    .paginationActive {
+        @apply bg-slate-600 text-slate-100;
+    }
+
+    .paginationEllipsis {
+        @apply text-slate-100;
+    }
+
+    .paginationItemsCountSelect {
+        @apply bg-slate-800 text-slate-200;
+    }
+
+    .paginationItemsCount {
+        p {
+            @apply text-slate-300;
+        }
+    }
+
+    .paginationInfo {
+        p {
+            @apply text-slate-200;
+        }
+    }
+}
